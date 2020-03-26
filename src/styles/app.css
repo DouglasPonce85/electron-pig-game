@@ -168,7 +168,21 @@ i {
   transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new {
+  top: 45px;
+  color: #fefeff;
+  border: 0.5px solid #a6b1c3;
+  background-color: #1c3648;
+  height: 7%;
+  margin-top: 30%;
+  box-shadow: 5px 4px 8px 0px #29294c;
+  padding-top: 5px;
+  opacity: 0.9;
+}
+.btn-new > i{
+  color: #fefeff;
+}
+
 .btn-roll { top: 403px;}
 .btn-hold { top: 467px;}
 
@@ -197,6 +211,11 @@ i {
 
 .winner .player-current-box {
   background-color: #ffffff;
+}
+
+.winning-cup {
+  width: 80px;
+  height: 80px;
 }
 
 .winner .player-current-box .player-current-score {

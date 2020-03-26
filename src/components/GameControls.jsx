@@ -1,13 +1,24 @@
 import React from 'react';
-import diceImg from '../images/dice-5.png';
 
-const GameControls = () => {
+const GameControls = (props) => {
     return (
         <div>
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-            <img src={diceImg} alt="Dice" class="dice" />
+            { props.gamePlaying ?
+            (
+                <div>
+                    <button className="btn-roll" onClick={ props.handleOnClickBtnRoll } >
+                        <i className="ion-ios-loop"></i>{props.rollMsg}
+                    </button>
+                    <button className="btn-hold" onClick={ props.handleOnClickBtnHold }>
+                        <i className="ion-ios-download-outline"></i>{props.holdMsg}
+                    </button>
+                </div>
+            ) : (
+                <button className="btn-new" onClick={ props.handleOnClickBtnNew }>
+                    <i className="ion-ios-plus-outline"></i>{props.newGame}
+                </button>
+            ) }
+            { props.diceVisible ? <img src={props.diceImg} alt="Dice" className="dice" /> : '' }
         </div>
     )
 };

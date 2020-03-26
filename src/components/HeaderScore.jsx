@@ -1,11 +1,12 @@
 import React from 'react';
 
-const HeaderScore = () => {
+const HeaderScore = (props) => {
     return (
-        <div class="input-form">
-            <label id="game-label" for="game-label">Enter game score points</label>
-            <input type="number" id="game-input" name="game-input"
-                placeholder="Score Points" onchange="updateGlobalScore(this.value)" />
+        <div className="input-form">
+            <label id="game-label" htmlFor="game-label">{props.gameLabel}</label>
+            <input type="number" id="game-input" name="game-input" placeholder="Score Points"
+                onChange={props.handleOnChangeWinningScore}
+                value={props.gameWinningScore} />
         </div>
     );
 }
