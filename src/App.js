@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import HeaderScore from './components/HeaderScore';
 import Player from './components/Player';
 import GameControls from './components/GameControls';
+
 import * as globals from './utils/globals';
 
 class App extends Component {
@@ -171,9 +172,9 @@ class App extends Component {
             <Player {...this.state.player1} />
 
             <GameControls
-              newGame='New game'
-              rollMsg='Roll dice'
-              holdMsg='Hold'
+              newGame={globals.newGame}
+              rollMsg={globals.rollMsg}
+              holdMsg={globals.holdMsg}
               gamePlaying={this.state.gamePlaying}
               diceImg={this.state.currentDiceImg}
               diceVisible={this.state.diceVisible}

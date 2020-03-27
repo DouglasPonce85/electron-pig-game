@@ -6,13 +6,17 @@ import dice5Img from '../images/dice-5.png';
 import dice6Img from '../images/dice-6.png';
 import cup from '../images/cup.png';
 
-export let winnerScore = 50;
 export const idPlayer0 = 'player0';
 export const idPlayer1 = 'player1';
 export const idPanel0 = 'player-0-panel';
 export const idPanel1 = 'player-1-panel';
 export const gameLabel = 'Enter game score points';
+export const newGame = 'New game';
+export const rollMsg = 'Roll dice';
+export const holdMsg = 'Hold';
+export let winnerScore = 50;
 export const winningCup = cup;
+
 export const dices = [
     dice1Img,
     dice2Img,
